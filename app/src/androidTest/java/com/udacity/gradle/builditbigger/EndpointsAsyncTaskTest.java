@@ -1,5 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
+import android.util.Log;
+
 import org.junit.Test;
 import org.junit.Assert;
 
@@ -8,7 +10,6 @@ import org.junit.Assert;
  */
 public class EndpointsAsyncTaskTest {
     EndpointsAsyncTask mTask;
-
     @Test
     public void testAsyncTask() throws Exception {
         mTask = new EndpointsAsyncTask(
@@ -19,6 +20,7 @@ public class EndpointsAsyncTaskTest {
                     }
                 }
         );
+        mTask.execute();
     }
 
 }
